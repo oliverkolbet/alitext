@@ -1,0 +1,9 @@
+#! /bin/bash
+echo "example.atxt" > .tmp_btxt
+echo "Setup running..."
+python3 alitext.py
+sleep 2s
+echo "Read the README for more information"
+sleep 3s
+echo "Restarting bash..."
+bash
