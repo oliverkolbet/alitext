@@ -44,7 +44,7 @@ if ftype[1] == 'aliraw':
 		print(file)
 		pyperclip.copy(file)
 	elif title == '<RUN>':
-		os.system('echo \"'+file+'\" > .tmp_runfile')
+		os.system('echo \"'+'\n'.join(file)+'\" > .tmp_runfile')
 		os.system('bash .tmp_runfile')
 		os.system('rm .tmp_runfile')
 elif ftype[1] == 'atxt':
