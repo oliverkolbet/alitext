@@ -2,8 +2,8 @@
 #When you need a more secure way to delete your files... use xhred!
 xhred() {
 i=0
-while [ $i -lt 6 ]; do
-shred -x -f "$@"
+while [ \$i -lt 6 ]; do
+shred -x -f \"\$@\"
 ((i=i+1))
-done
+done;
 }
