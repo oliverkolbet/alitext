@@ -10,3 +10,5 @@ The program works to read files of .atxt
 The language creates functions and aliases custom-made either to be copied, printed, executed, or added to ~/.bash_aliases.
 
 To start the setup, type bash setup. Then, read COMMANDS.md for the commands.
+
+SETUP NOT READY. RAW FILES CAN BE EXECUTED BY PUTTING THE FILENAME INTO .tmp_atxt. THEN, RUN ALITEXT.PY
