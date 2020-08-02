@@ -16,11 +16,12 @@ tmp_info=tmp_info.split('\n')
 debug(tmp_info)
 ali_file_name=tmp_info[0]
 debug(ali_file_name)
+file_seg=0
+file_args=0
 if len(tmp_info) > 1:
 	file_seg=tmp_info[1]
 	if len(tmp_info) > 2:
 		file_args=tmp_info[2]
-		file_args.split(':')
 ftype = (ali_file_name.split('.'))
 debug(ftype)
 if ftype[1] == 'aliraw':
@@ -37,16 +38,18 @@ if ftype[1] == 'aliraw':
 	if title == '<ALIAS>':
 		bash_aliases=open('~/.bash_aliases','a')
 		for line in file:
-		bash_aliases.write(line)
+			bash_aliases.write(line)
 	elif title == '<COPY>':
 		file='\n'.join(file)
 		print('--------------COPIED:---------------')
 		print(file)
 		pyperclip.copy(file)
 	elif title == '<RUN>':
-		os.system('echo \"'+'\n'.join(file)+'\" > .tmp_runfile')
+		runfile=open('.tmp_runfile','w')
+		runfile.write('\n'.join(file))
 		os.system('bash .tmp_runfile')
 		os.system('rm .tmp_runfile')
 elif ftype[1] == 'atxt':
-	#Do everything else
-	print('OOF')
+	file=open('.'.join(ftype), 'r')
+	file=file.read().srtip().split('\n')
+	#More soon!

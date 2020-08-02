@@ -1,4 +1,5 @@
 #! /bin/bash
+echo "$(pwd)/alitext.py" > ~/.alitext_locale
 echo "example.atxt" > .tmp_atxt
 echo "Setup running..."
 python3 alitext.py

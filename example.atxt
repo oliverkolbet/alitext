@@ -1,1 +1,9 @@
-<main>
+<main>;
+>push<;
+]fun]nam]ali];
+|if|is|bar2|`-s`|;
+^echo `bar1` > .tmp_atxt && echo `bar3` >> .tmp_atxt && python3 "$(cat ~/.alitext_locale)"^;
+|els|;
+^echo `bar1` > .tmp_atxt && python3 "$(cat ~/.alitext_locale)"^;
+|don|;
+]don];	
