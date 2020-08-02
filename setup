@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "example.atxt" > .tmp_btxt
+echo "example.atxt" > .tmp_atxt
 echo "Setup running..."
 python3 alitext.py
 sleep 2s
