@@ -35,7 +35,9 @@ if ftype[1] == 'aliraw':
 	sleep(2)
 	file=file[2:]
 	if title == '<ALIAS>':
-		os.system('echo \"'+'\n'.join(file)+'\" >> ~/.bash_aliases')
+		bash_aliases=open('~/.bash_aliases','a')
+		for line in file:
+		bash_aliases.write(line)
 	elif title == '<COPY>':
 		file='\n'.join(file)
 		print('--------------COPIED:---------------')
